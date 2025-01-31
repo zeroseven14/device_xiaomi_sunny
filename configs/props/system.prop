@@ -3,6 +3,7 @@ vendor.bluetooth.soc=cherokee
 
 # Display
 debug.force_no_blanking=true
+persist.debug.wfd.enable=1
 
 # IOP
 vendor.iop.enable_prefetch_ofr=1
