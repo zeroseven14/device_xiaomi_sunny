@@ -11,12 +11,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sunny device
 $(call inherit-product, device/xiaomi/sunny/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Infinity-X stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+
+# Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Other Flags
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := "ZNAIV"
+WITH_GAPPS := true
+TARGET_BUILD_GOOGLE_TELEPHONY := true
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_sunny
+PRODUCT_NAME := infinity_sunny
 PRODUCT_DEVICE := sunny
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2101K7AG
