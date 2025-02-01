@@ -22,6 +22,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# Inherit Mind The Gapps
+$(call inherit-product, vendor/gapps/gapps.mk)
+
+# Signed Keys
+-include vendor/voltage-priv/keys/keys.mk
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -348,6 +354,8 @@ PRODUCT_PACKAGES += \
     WifiSunny \
     SettingsOverlayM2101K7AG \
     SettingsOverlayM2101K7AI
+
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-voltage
 
 # Perf
 PRODUCT_COPY_FILES += \
