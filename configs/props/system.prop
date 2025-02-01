@@ -28,3 +28,12 @@ telephony.lteOnCdmaDevice=1
 
 # WiFi
 wifi.interface=wlan0
+
+# AboutPhone Info
+ro.infinity.soc=Qualcomm SDM678
+ro.infinity.battery=5000 mAh
+ro.infinity.display=1080 x 2400
+ro.infinity.camera=48 MP + 8 MP + 2 MP
+
+# Device Name
+ro.product.marketname=Redmi Note 10 4G
