@@ -349,6 +349,8 @@ PRODUCT_PACKAGES += \
     SettingsOverlayM2101K7AG \
     SettingsOverlayM2101K7AI
 
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-pixelage
+
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
